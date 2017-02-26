@@ -23,6 +23,8 @@ public class InputController : MonoBehaviour
 
             _quitText.enabled = true;
         }
+        if (Input.GetKeyDown(KeyCode.Q))
+            Application.Quit();
         
     }
     
