@@ -4,25 +4,25 @@ using UnityEngine;
 
 public class ConveyorBelt : MonoBehaviour 
 {
-    
+    private float _moveSpeed = .2F;
 	// Use this for initialization
 	void Start () 
 	{
 		
 	}
 	
-	// Update is called once per frame
+	
 	void Update () 
 	{
-		
+        
 	}
 
 	void OnCollisionStay2D(Collision2D col) 
 	{
         if (col.gameObject.name == "Poop")
 		{
-            col.gameObject.GetComponent<Rigidbody2D>().velocity.Set(-4, 0);
-            Debug.Log("collided");
+            col.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(col.gameObject.transform.position.x + _moveSpeed, col.gameObject.transform.position.y));
+            Debug.Log("shitfuck");
 		}
 
     }
