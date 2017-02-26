@@ -15,7 +15,7 @@ public class Poop : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
     {
-        if (time > 4)
+        if (time > 6)
             GameObject.Destroy(gameObject);
         time += Time.deltaTime;
 	}
