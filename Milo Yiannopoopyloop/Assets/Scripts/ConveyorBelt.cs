@@ -21,16 +21,10 @@ public class ConveyorBelt : MonoBehaviour
 	{
         if (col.gameObject.name == "Poop")
 		{
-            _moveSpeed = Random.Range(.25F, 5);
+            _moveSpeed = Random.Range(3.5F, 6.25F);
+            Debug.Log(_moveSpeed);
             col.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(col.gameObject.transform.position.x + _moveSpeed, col.gameObject.transform.position.y));
-            Debug.Log("shitfuck");
 		}
 
     }
-
-    void OnCollisionExit2D(Collision2D col)
-    {
-        
-    }
-
 }

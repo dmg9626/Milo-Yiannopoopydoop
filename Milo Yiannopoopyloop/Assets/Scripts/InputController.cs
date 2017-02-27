@@ -5,27 +5,33 @@ using System.Collections;
 public class InputController : MonoBehaviour
 {
     private GameObject _poop;
-    private MeshRenderer _quitText;
+    private CanvasRenderer _quitText;
     void Start()
     {
-        _quitText = GameObject.Find("Text_PressQ").GetComponent<MeshRenderer>();
+        _quitText = GameObject.Find("Text_PressQ").GetComponent<CanvasRenderer>();
     }
 
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.Space))
         {
-            _poop = Instantiate(Resources.Load("Poop")) as GameObject;
-            _poop.transform.position = new Vector2(6.84F, 3.88F);
-            _poop.name = "Poop";
-            float mass = Random.Range(.5F, 2);
-            _poop.GetComponent<Rigidbody2D>().mass = mass;
-
-            _quitText.enabled = true;
+            InstantiatePoop();
         }
         if (Input.GetKeyDown(KeyCode.Q))
             Application.Quit();
         
     }
-    
+
+    private void InstantiatePoop()
+    {
+        Vector2 mrPoopyButtPos = GameObject.Find("MrPoopyButt").transform.position;
+
+        _poop = Instantiate(Resources.Load("Poop")) as GameObject;
+        _poop.transform.position = new Vector2(mrPoopyButtPos.x + 1, mrPoopyButtPos.y - 1.5F);
+        _poop.name = "Poop";
+        float mass = Random.Range(.5F, 1.75F);
+        _poop.GetComponent<Rigidbody2D>().mass = mass;
+
+        
+    }
 }

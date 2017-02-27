@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class Poop : MonoBehaviour 
 {
-    GameObject poo;
     float time = 0;
 	// Use this for initialization
 	void Start () 
     {
         PoopSoundEffect();
+        gameObject.name = "Poop";
 	}
 	
 	// Update is called once per frame
@@ -21,7 +21,7 @@ public class Poop : MonoBehaviour
 	}
 
 
-    void PoopSoundEffect()
+    private void PoopSoundEffect()
     {
         GameObject sound = Instantiate(Resources.Load("Sound_Fart")) as GameObject;
         Destroy(sound, sound.GetComponent<AudioSource>().clip.length);
