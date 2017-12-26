@@ -2,7 +2,7 @@
 an alt-right sandbox simulation experience
 
 ## What is this game?
-This is the result of showing up to [a hackathon](http://www.stupidhackathon.com "Stupid Hackathon") very late. I wanted to work on my skills in Unity scripting with physics while making something simple that everyone can enjoy. 
+This is a silly game I made at [Stupid Hackathon](http://www.stupidhackathon.com "Stupid Hackathon"). I wanted to work on my skills in Unity scripting with physics while making something simple that everyone can enjoy. 
 
 ![](Screenshots/screenshot.png?raw=true)
 
